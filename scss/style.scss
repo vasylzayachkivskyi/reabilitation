@@ -511,6 +511,7 @@
   li {
     display: inline-block;
     position: relative;
+    cursor: pointer;
 
     &::after {
       content: '';
