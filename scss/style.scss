@@ -511,7 +511,7 @@
   li {
     display: inline-block;
     position: relative;
-    cursor: pointer;
+    
 
     &::after {
       content: '';
@@ -522,6 +522,7 @@
       top: 0;
       right: 0;
       border-radius: 50%;
+      cursor: pointer;
     }
 
     &.slick-active {
