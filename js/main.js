@@ -91,9 +91,21 @@ $(function () {
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path stroke="#b62c2c" d="M12 .288l2.833 8.718h9.167l-7.417 5.389 2.833 8.718-7.416-5.388-7.417 5.388 2.833-8.718-7.416-5.389h9.167z"/></svg>',
   });
 
-  $(".services__col-item").on("click", function () {
-    $(this).toggleClass("services__col-item--active");
-  });
+
+  $(window).resize(function() {
+      if ( $(window).width() < 768 ) {
+        $(".services__col-item").on("click", function () {
+          $(this).toggleClass("services__col-item--active");
+        });
+        $(".services__col-item").removeClass("hover");
+      } 
+    });
+    
+
+      
+
+
+
   $(".menu__btn").on("click", function () {
     $(".menu__btn").toggleClass("menu__btn--active");
     $(".mobile__menu").toggleClass("mobile__menu--active");
@@ -108,7 +120,7 @@ $(function () {
         countNum: countTo,
       },
       {
-        duration: 7000,
+        duration: 2000,
         easing: "linear",
         step: function () {
           $this.text(Math.floor(this.countNum));
@@ -121,4 +133,6 @@ $(function () {
     );
   });
   // end counter script
+
+
 });

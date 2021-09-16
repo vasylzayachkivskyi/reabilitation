@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -61,15 +62,16 @@ body {
     color: #fff;
     font-size: 16px;
     padding: 22px 5px;
+    font-weight: 600;
     background-color: #B62C2C;
     transition: all .3s;
     &:hover{
-      background-color: rgba(#b62c2c, .8);
+      background-color: #A12626;
     }
   }
   span{
     border: 1px solid #fff;
-    padding: 15px 12px;
+    padding: 15px 30px;
   }  
 }
 .inner__row{
@@ -79,7 +81,7 @@ body {
   width: 100%;
 }
 .title{
-  max-width: 420px;
+  max-width: 400px;
   font-weight: 700;
   font-size: 36px;
   line-height: 45px;
