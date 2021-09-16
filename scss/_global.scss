@@ -57,21 +57,39 @@ body {
   margin: 0 auto;
 }
 
+.primary:focus {
+  color: #fff;
+  background-color: #B62C2C;
+  border-color: #B62C2C;
+  box-shadow: none;
+}
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:disabled,
+.btn-primary:active,
+.btn-rimary:focus {
+  background-color: #B62C2C;
+  border-color: #B62C2C;
+  box-shadow: none;
+}
+
 .inner__btn{
-  a{
+  button{
     color: #fff;
     font-size: 16px;
-    padding: 22px 5px;
+    padding: 22px 6px;
     font-weight: 600;
     background-color: #B62C2C;
     transition: all .3s;
+    border: none;
+    border-radius: 0%;
     &:hover{
       background-color: #A12626;
     }
   }
   span{
     border: 1px solid #fff;
-    padding: 15px 30px;
+    padding: 18px 30px;
   }  
 }
 .inner__row{

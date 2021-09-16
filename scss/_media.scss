@@ -408,22 +408,11 @@
     margin-bottom: 40px;
   }
 
-  .modal__title {
+  #exampleModalLabel {
     font-size: 25px;
     line-height: 35px;
   }
 
-  #popup .popup__form .popup-btn a {
-    font-size: 12px;
-  }
-
-  #popup__window span {
-    padding: 15px 70px;
-  }
-
-  #popup__window {
-    padding-top: 120px;
-  }
 
 
 
@@ -456,6 +445,7 @@
 
   .main__inner-info {
     flex-direction: column;
+    max-width: 150px;
   }
 
   .main__inner-btn {
@@ -575,6 +565,16 @@
     padding-top: 20px;
     font-size: 14px;
     line-height: 20px;
+  }
+
+  #exampleModalLabel {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .modal__subtitle {
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 

@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.plyr.io/3.6.8/plyr.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
   <link rel="stylesheet" href="css/libs.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
@@ -157,7 +158,10 @@
           Широкий спектр реабілітаційних послуг
         </div>
         <div class="main__inner-btn inner__btn">
-          <a data-fancybox data-src="#popup" href="javascript:;"><span>Безкоштовна консультація</span></a>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <span>Безкоштовна консультація</span>
+          </button>
+          
         </div>
         <div class="main__inner-info">
           <div class="main__info-item">
@@ -636,40 +640,63 @@
 
 
 
-
-
-  <div id="popup" style="display: none;">
-    <div class="modal__title">
-      Залиште свої контакти
-      і ми зв’яжемось з Вами!
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Залиште свої контакти
+            і ми зв’яжемось з Вами!
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="">
+            <div class="popup__form">
+              <input type="text" value="Ім’я">
+              <input type="text" value="Номер телефону">
+              <button type="submit" class="popup-btn btn btn-primary" data-bs-toggle="modal" data-bs-target="#secondModal">
+                Отримати консультацію
+              </button>
+            </div>
+            <div class="modal__form-check">
+              <input type="checkbox" id="check__contacts">
+              <label for="check__popup">Даю згоду на обробку персональних даних</label>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
-    <form action="">
-      <div class="popup__form">
-        <input type="text" value="Ім’я">
-        <input type="text" value="Номер телефону">
-        <button type="submit" class="popup-btn ">
-          <a data-fancybox data-src="#popup__window" href="javascript:;">Отримати консультацію</a>
-        </button>
-      </div>
-      <div class="modal__form-check">
-        <input type="checkbox" id="check__contacts">
-        <label for="check__popup">Даю згоду на обробку персональних даних</label>
-      </div>
-    </form>
   </div>
 
-  <div id="popup__window" style="display: none;">
-    <div class="modal__title">
-      Дякуємо!
+
+
+  <div class="modal fade " id="secondModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">
+            Дякуємо!
+          </h5>
+          <div class="modal__subtitle">
+            Ми зв’яжемось з Вами
+            найближчим часом
+          </div>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          
+        </div>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+           <span>На головну</span>
+          </button>
+        </div> 
+      </div>
     </div>
-    <div class="modal__subtitle">
-      Ми зв’яжемось з Вами
-      найближчим часом
-    </div>
-    <a data-fancybox-close class="popup__window-btn" href="index.html">
-      <span>На головну</span>
-    </a>
   </div>
+
+
+
 
 
 
@@ -680,6 +707,7 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.3.2/jquery.rateyo.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
   <script src="js/libs.min.js"></script>
   <script src="https://cdn.plyr.io/3.6.8/plyr.js"></script>
   <script src="js/main.js"></script>
