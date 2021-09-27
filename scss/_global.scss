@@ -73,23 +73,22 @@ body {
   box-shadow: none;
 }
 
+
 .inner__btn{
-  button{
+  a{
     color: #fff;
     font-size: 16px;
-    padding: 22px 6px;
+    padding: 22px 5px;
     font-weight: 600;
     background-color: #B62C2C;
     transition: all .3s;
-    border: none;
-    border-radius: 0%;
     &:hover{
       background-color: #A12626;
     }
   }
   span{
     border: 1px solid #fff;
-    padding: 18px 30px;
+    padding: 15px 30px;
   }  
 }
 .inner__row{

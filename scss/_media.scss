@@ -24,7 +24,7 @@
     height: auto;
   }
 
-  .footer__menu li+li {
+  .footer__menu li + li {
     padding-left: 25px;
   }
 }
@@ -187,7 +187,7 @@
     display: flex;
     justify-content: center;
 
-    a+a {
+    a + a {
       padding-left: 20px;
     }
   }
@@ -278,17 +278,23 @@
     flex-wrap: wrap;
   }
 
+  .services__inner-row {
+    justify-content: space-around;
+  }
   .services__col {
     width: 49%;
 
     &:last-child {
       padding-top: 2px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       width: 100%;
+      .services__col-item {
+        width: 49%;
+      }
 
-      .services__col-item+.services__col-item {
-        margin-left: 15px;
+      .services__col-item + .services__col-item {
+        margin-left: 3px;
       }
     }
   }
@@ -371,15 +377,41 @@
     width: 450px;
   }
 
-  .services {
-    background-position: 50%, 50%;
-  }
-
   .services__col-description {
     padding-top: 10px;
     font-size: 14px;
     line-height: 18px;
     max-width: 100%;
+  }
+  .services__col {
+    width: 100%;
+  }
+
+  .services__col-item {
+    margin-bottom: 5px;
+  }
+
+  .services__col:last-child {
+    padding-top: 2px;
+    display: block;
+    width: 100%;
+    .services__col-item {
+      width: 100%;
+    }
+
+    .services__col-item + .services__col-item {
+      margin-left: 0;
+    }
+  }
+
+  .services__col-wrapper p {
+    font-size: 20px;
+  }
+
+  .services__col-description {
+    padding-top: 15px;
+    font-size: 15px;
+    line-height: 25px;
   }
 
   .contacts__inner-info {
@@ -401,23 +433,12 @@
   }
 
   .services {
-    background-position: 95%, 50%;
+    background-position: 100%, 50%;
   }
 
   .comments__inner-info {
     margin-bottom: 40px;
   }
-
-  #exampleModalLabel {
-    font-size: 25px;
-    line-height: 35px;
-  }
-
-
-
-
-
-
 }
 
 @media (max-width: 576px) {
@@ -461,43 +482,34 @@
     width: 350px;
   }
 
-  .services__col {
-    width: 100%;
-  }
-
-  .services__col-item {
-    margin-bottom: 5px;
-  }
-
-  .services__col:last-child {
-    padding-top: 2px;
-    display: block;
-    width: 100%;
-
-    .services__col-item+.services__col-item {
-      margin-left: 0;
-    }
-  }
-
-  .services__col-wrapper p {
-    font-size: 20px;
-  }
-
-  .services__col-description {
-    padding-top: 15px;
-    font-size: 15px;
-    line-height: 25px;
-  }
-
   .contacts {
-    padding-top: 65px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 65px;
+    background-position: 50%, 50%;
+  }
+
+  .modal__title {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  #popup .popup__form .popup-btn a {
+    font-size: 12px;
+  }
+  #popup__window span {
+    padding: 15px 70px;
+  }
+  #popup__window {
+    padding-top: 120px;
+  }
+  #popup__window,
+  #popup {
+    height: 500px;
   }
 }
 
 @media (max-width: 500px) {
   .inner__btn {
-    a {
+    button {
       font-size: 12px;
     }
   }
@@ -534,7 +546,7 @@
 
   .contacts__form input {
     margin-bottom: 10px;
-    padding: 20px;
+    padding: 15px;
   }
 
   .contacts__form button {
@@ -542,7 +554,22 @@
   }
 
   .contacts__inner-phone {
-    padding-bottom: 10px;
+    padding-bottom: 0px;
+    padding-top: 20px;
+  }
+  #popup {
+    height: 450px;
+    .popup__form input {
+      padding: 16px 25px;
+    }
+  }
+  .modal__title {
+    font-size: 20px;
+    line-height: 25px;
+  }
+  .modal__subtitle {
+    font-size: 20px;
+    line-height: 25px;
   }
 }
 
@@ -566,30 +593,56 @@
     font-size: 14px;
     line-height: 20px;
   }
-
-  #exampleModalLabel {
-    font-size: 20px;
-    line-height: 30px;
-  }
-
   .modal__subtitle {
-    font-size: 20px;
-    line-height: 25px;
+    width: 220px;
+    font-size: 18px;
+    line-height: 20px;
+  }
+  .inner__btn {
+    span {
+      padding: 15px 15px;
+    }
+    a {
+      font-size: 13px;
+    }
   }
 }
 
 @media (max-width: 360px) {
   .contacts {
-    padding-top: 75px;
-    padding-bottom: 80px;
-    overflow: hidden;
+    padding-top: 40px;
+    padding-bottom: 65px;
+    background-position: 50%, 50%;
+  }
+  .contacts__form-check {
+    font-size: 9px;
+  }
+  #popup,
+  #popup__window {
+    height: 400px;
   }
 
-  .form-check {
-    font-size: 11px;
+  .modal__title {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
   }
-
-  #popup__window span {
-    padding: 15px 50px;
+  .modal__subtitle {
+    font-size: 16px;
+    line-height: 16px;
+  }
+  #popup .form-check {
+    font-size: 8px;
+  }
+  #popup .popup__form .popup-btn a {
+    padding: 15px 15px;
+  }
+  #popup__window {
+    a {
+      padding: 14px 5px;
+    }
+    span {
+      padding: 7px 50px;
+    }
   }
 }
